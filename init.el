@@ -26,7 +26,7 @@
 (setq read-process-output-max (* 1024 1024)) ; 1mb
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;; (load-theme 'jblow-moneygreen)
+(load-theme 'jblow-moneygreen)
 
 (setq-default truncate-lines t)
 (if (window-system) (set-frame-size (selected-frame) 213 44))
@@ -46,10 +46,11 @@
 
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 
-(global-set-key (kbd "C-d") 'kill-line)
 (global-set-key (kbd "C-o") 'find-file)
 ;; C-s clashes with Search, and I can't easily redefine <C-s C-s> for repeated search
 ;; (global-set-key (kbd "C-s") 'save-some-buffers)
+(global-set-key (kbd "C-r") 'replace-string)
+(global-set-key (kbd "C-d") 'kill-line)
 (global-set-key (kbd "C-y") 'kill-whole-line)
 ;; (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-j") 'goto-line)
