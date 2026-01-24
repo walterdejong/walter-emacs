@@ -48,11 +48,11 @@
 
 (global-set-key (kbd "C-o") 'find-file)
 ;; C-s clashes with Search, and I can't easily redefine <C-s C-s> for repeated search
+;; (global-set-key (kbd "C-f") 'isearch-forward)
 ;; (global-set-key (kbd "C-s") 'save-some-buffers)
 (global-set-key (kbd "C-r") 'replace-string)
 (global-set-key (kbd "C-d") 'kill-line)
 (global-set-key (kbd "C-y") 'kill-whole-line)
-;; (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-j") 'goto-line)
 
 (global-set-key (kbd "C-z") 'undo)
