@@ -1,6 +1,8 @@
 ;;
 ;;  jblow-moneygreen-theme.el
 ;;
+;;  * btw, `M-x list-faces-display` shows all possible faces
+;;
 
 (deftheme jblow-moneygreen "Dark green theme based on twitch.tv/j_blow" :background-mode "dark" :kind "color-scheme" :family "dark")
   (custom-theme-set-faces 'jblow-moneygreen
