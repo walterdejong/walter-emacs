@@ -4,6 +4,8 @@
 
 (setq inhibit-splash-screen t)
 
+(setq debug-on-error t)
+
 (add-to-list 'load-path "~/.emacs.d/better-defaults")
 (require 'better-defaults)
 
@@ -21,10 +23,10 @@
 (setq gc-cons-threshold 100000000) ; 100 mb
 (setq read-process-output-max (* 1024 1024)) ; 1mb
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;; (load-theme 'zenburn)
-
 (set-cursor-color "#00ee00")
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; (load-theme 'jblow-moneygreen)
 
 (setq-default truncate-lines t)
 (if (window-system) (set-frame-size (selected-frame) 213 44))
@@ -32,19 +34,6 @@
 
 ;; (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (global-display-line-numbers-mode t)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(cursor ((t (:background "#000000" :foreground "#00cc00")))))
 
 ;; save without query
 (add-hook 'find-file-hook (lambda () (setq buffer-save-without-query t)))
@@ -124,16 +113,29 @@
 
 (keymap-set global-map "C-w" walter-window-prefix-map)
 
-;; (define-minor-mode walter-mode
-;;   "Get your foos in the right places."
-;;   :lighter " WJ"
-;;   :keymap (let ((map (make-sparse-keymap)))
-;;             (define-key map (kbd "C-w w") 'other-window)
-;;             map))
-;;
-;; ;;;###autoload
-;; (add-hook 'text-mode-hook 'walter-mode)
-;;
-;; (provide 'walter-mode)
+
+;; nicer window divider line
+(unless standard-display-table
+(setq standard-display-table (make-display-table)))
+(defun my-change-window-divider ()
+  (let ((display-table (or buffer-display-table standard-display-table)))
+    (set-display-table-slot display-table `vertical-border' ?│)
+    (set-window-display-table (selected-window) display-table)))
+(add-hook 'window-configuration-change-hook 'my-change-window-divider)
+
+;;;;;
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cursor ((t (:background "#000000" :foreground "#00cc00")))))
 
 ;; EOB
