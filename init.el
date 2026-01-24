@@ -4,7 +4,7 @@
 
 (setq inhibit-splash-screen t)
 
-(add-to-list 'load-path "/home/walter/.emacs.d/better-defaults")
+(add-to-list 'load-path "~/.emacs.d/better-defaults")
 (require 'better-defaults)
 
 (set-frame-font "Source Code Pro Medium 11" nil t)
@@ -21,8 +21,8 @@
 (setq gc-cons-threshold 100000000) ; 100 mb
 (setq read-process-output-max (* 1024 1024)) ; 1mb
 
-(add-to-list 'custom-theme-load-path "/home/walter/.emacs.d/themes/")
-(load-theme 'zenburn t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; (load-theme 'zenburn)
 
 (set-cursor-color "#00ee00")
 
@@ -57,13 +57,14 @@
 
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 
+(global-set-key (kbd "C-d") 'kill-line)
 (global-set-key (kbd "C-o") 'find-file)
 ;; C-s clashes with Search, and I can't easily redefine <C-s C-s> for repeated search
 ;; (global-set-key (kbd "C-s") 'save-some-buffers)
 (global-set-key (kbd "C-y") 'kill-whole-line)
 ;; (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-j") 'goto-line)
- 
+
 (global-set-key (kbd "C-z") 'undo)
 
 (defvar-keymap walter-wordstar-prefix-map
@@ -129,10 +130,10 @@
 ;;   :keymap (let ((map (make-sparse-keymap)))
 ;;             (define-key map (kbd "C-w w") 'other-window)
 ;;             map))
-;; 
+;;
 ;; ;;;###autoload
 ;; (add-hook 'text-mode-hook 'walter-mode)
-;; 
+;;
 ;; (provide 'walter-mode)
 
 ;; EOB
