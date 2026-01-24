@@ -13,6 +13,8 @@
 
 (setq-default cursor-type 'box)
 (blink-cursor-mode -1)
+(set-cursor-color "green")
+(add-to-list 'default-frame-alist '(cursor-color . "green"))
 
 (setq-default tab-width 4)
 
@@ -22,8 +24,6 @@
 
 (setq gc-cons-threshold 100000000) ; 100 mb
 (setq read-process-output-max (* 1024 1024)) ; 1mb
-
-(set-cursor-color "#00ee00")
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;; (load-theme 'jblow-moneygreen)
@@ -136,6 +136,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(cursor ((t (:background "#000000" :foreground "#00cc00")))))
+ )
+
+(set-cursor-color "green")
 
 ;; EOB
