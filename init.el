@@ -18,7 +18,9 @@
 
 (setq-default tab-width 4)
 
-(tool-bar-mode -1)
+(when (display-graphic-p)
+  (tool-bar-mode -1)
+)
 
 (electric-pair-mode 1)
 
