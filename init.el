@@ -71,6 +71,12 @@
 (use-package dumb-jump :ensure t)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
+;;
+;;  trim trailing whitespace
+;;
+(use-package ws-butler :ensure t)
+(add-hook 'prog-mode-hook #'ws-butler-mode)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
