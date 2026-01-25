@@ -1,7 +1,7 @@
 ;;
 ;;  key bindings
 ;;
-  
+
 ;; Open
 (global-set-key (kbd "C-o") 'find-file)
 
@@ -30,22 +30,25 @@
 
 (defvar-keymap walter-wordstar-prefix-map
   :doc "WordStar-like map. It's my custom map, so it's not exact."
-  "a" #'mark-whole-buffer
   "b" #'set-mark-command
-  "k" #'keyboard-quit
-  "@" #'mark-defun
   "c" #'kill-ring-save
   "y" #'kill-region
   "DEL" #'kill-region
   "v" #'yank
+  "k" #'keyboard-quit
+  "w" #'write-region
+  "r" #'read-file
+  "@" #'mark-defun
+  "a" #'mark-whole-buffer
   "f" #'isearch-forward
   "g" #'replace-string
-  "r" #'replace-regexp
   "i" #'string-insert-rectangle
+  "|" #'rectangle-mark-mode
   "/" #'comment-line
+  "o" #'find-file-other-window
   "s" #'save-some-buffers
   "C-s" #'save-some-buffers
-  "w" #'write-region
+  "d" #'write-file
   "x" #'save-buffers-kill-emacs
   "q" #'kill-emacs
   )
