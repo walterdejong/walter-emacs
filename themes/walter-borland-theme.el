@@ -12,7 +12,7 @@
    '(line-number ((t (:foreground "#c0c0c0" :background "#000080" ))))
    '(line-number-current-line ((t (:foreground "#ffffff" :background "#000080" ))))
    '(mode-line ((t (:foreground "#000000" :background "#c0c0c0" ))))
-   '(region ((t (:background "#c0c0c0" ))))
+   '(region ((t (:foreground "#000000" :background "#c0c0c0" ))))
    '(secondary-selection ((t (:background "#000000" ))))
    '(font-lock-builtin-face ((t (:foreground "#ffff00" ))))
    '(font-lock-comment-face ((t (:foreground "#c0c0c0" ))))
