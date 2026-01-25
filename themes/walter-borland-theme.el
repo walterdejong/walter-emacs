@@ -1,35 +1,35 @@
 ;;
-;;  tsoding-dark-theme.el
+;;  walter-borland-theme.el
 ;;
 ;;  * btw, `M-x list-faces-display` shows all possible faces
 ;;
 
-(deftheme tsoding-dark "based on twitch.tv/tsoding" :background-mode "dark" :kind "color-scheme" :family "dark")
-  (custom-theme-set-faces 'tsoding-dark
-   '(default ((t (:foreground "#e0e0e0" :background "#101010" ))))
-   '(cursor ((t (:foreground "#000000" :background "#eeee00" ))))
-   '(fringe ((t (:background "#24292e" ))))
-   '(line-number ((t (:foreground "#777777" :background "#101010" ))))
-   '(line-number-current-line ((t (:foreground "#eeee00" :background "#101010" ))))
-   '(mode-line ((t (:foreground "#282c33" :background "#c8ccd4" ))))
-   '(region ((t (:background "#404040" ))))
-   '(secondary-selection ((t (:background "#be5046" ))))
-   '(font-lock-builtin-face ((t (:foreground "#e0e0e0" ))))
-   '(font-lock-comment-face ((t (:foreground "#ffbb00" ))))
-   '(font-lock-constant-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-doc-face ((t (:foreground "#ffbb00" ))))
-   '(font-lock-doc-markup-face ((t (:foreground "#ffbb00" ))))
-   '(font-lock-function-name-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-keyword-face ((t (:foreground "#eeee00" ))))
-   '(font-lock-number-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-operator-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-punctuation-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-misc-punctuation-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-preprocessor-face ((t (:foreground "#e0e0e0"))))
-   '(font-lock-string-face ((t (:foreground "#00c000" ))))
-   '(font-lock-type-face ((t (:foreground "#a0a0a0" ))))
-   '(font-lock-variable-name-face ((t (:foreground "#e0e0e0"))))
-   '(minibuffer-prompt ((t (:foreground "#b8bb26" :bold t ))))
+(deftheme walter-borland "Borland (white on blue)" :background-mode "dark" :kind "color-scheme" :family "dark")
+  (custom-theme-set-faces 'walter-borland
+   '(default ((t (:foreground "grey" :background "darkblue" ))))
+   '(cursor ((t (:foreground "black" :background "green" ))))
+   '(fringe ((t (:background "darkblue" ))))
+   '(line-number ((t (:foreground "grey" :background "darkblue" ))))
+   '(line-number-current-line ((t (:foreground "brightwhite" :background "darkblue" ))))
+   '(mode-line ((t (:foreground "black" :background "grey" ))))
+   '(region ((t (:background "grey" ))))
+   '(secondary-selection ((t (:background "black" ))))
+   '(font-lock-builtin-face ((t (:foreground "brightyellow" ))))
+   '(font-lock-comment-face ((t (:foreground "grey" ))))
+   '(font-lock-constant-face ((t (:foreground "brightwhite"))))
+   '(font-lock-doc-face ((t (:foreground "grey" ))))
+   '(font-lock-doc-markup-face ((t (:foreground "grey" ))))
+   '(font-lock-function-name-face ((t (:foreground "brightyellow"))))
+   '(font-lock-keyword-face ((t (:foreground "brightwhite" ))))
+   '(font-lock-number-face ((t (:foreground "brightwhite"))))
+   '(font-lock-operator-face ((t (:foreground "brightwhite"))))
+   '(font-lock-punctuation-face ((t (:foreground "brightwhite"))))
+   '(font-lock-misc-punctuation-face ((t (:foreground "brightwhite"))))
+   '(font-lock-preprocessor-face ((t (:foreground "brightwhite"))))
+   '(font-lock-string-face ((t (:foreground "brightcyan" ))))
+   '(font-lock-type-face ((t (:foreground "brightwhite" ))))
+   '(font-lock-variable-name-face ((t (:foreground "brightyellow"))))
+   '(minibuffer-prompt ((t (:foreground "grey" :bold t ))))
    '(font-lock-warning-face ((t (:foreground "red" :bold t ))))
    )
 
@@ -40,7 +40,7 @@
                  (file-name-as-directory
                   (file-name-directory load-file-name))))
 
-(provide-theme 'tsoding-dark)
+(provide-theme 'walter-borland)
 
 
 ;; (custom-theme-set-faces

@@ -127,6 +127,7 @@ Included colorschemes are:
 * Walter in the Light
 * Walter in the Dark
 * Walter in Amber
+* Walter Borland
 * JBlow Moneygreen
 * Tsoding Dark
 
