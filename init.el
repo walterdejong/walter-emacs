@@ -63,7 +63,10 @@
 (use-package cargo-mode :ensure t)
 
 ;;
-;;  dumb-jump : `M-.` Jump/Goto function definition
+;;  dumb-jump
+;;
+;;  `M-.` Jump/Goto function definition
+;;  `M-,` jump back
 ;;
 (use-package dumb-jump :ensure t)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
