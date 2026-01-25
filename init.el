@@ -52,6 +52,22 @@
 
 ;;;;;
 
+(use-package eglot :ensure t)
+(use-package flycheck :ensure t)
+(use-package diffview :ensure t)
+
+;; tree-sitter has some issues (on debian 13 emacs)
+;; so we use the MELPA packages for these languages ...
+(use-package go-mode :ensure t)
+(use-package rust-mode :ensure t)
+(use-package cargo-mode :ensure t)
+
+;;
+;;  dumb-jump : `M-.` Jump/Goto function definition
+;;
+(use-package dumb-jump :ensure t)
+(add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
