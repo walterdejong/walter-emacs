@@ -50,6 +50,9 @@
     (set-window-display-table (selected-window) display-table)))
 (add-hook 'window-configuration-change-hook 'my-change-window-divider)
 
+;; scrolling
+;; (setq scroll-step 1 scroll-conservatively 10000)
+
 ;;;;;
 
 (use-package eglot :ensure t)

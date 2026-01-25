@@ -101,4 +101,26 @@
 (global-unset-key (kbd "C-w"))
 (keymap-set global-map "C-w" walter-window-prefix-map)
 
+(defvar-keymap walter-quickmove-prefix-map
+  :doc "quickmove commands."
+  "r" #'point-to-register
+  "m" #'point-to-register
+  "j" #'jump-to-register
+  "q" #'beginning-of-buffer
+  "C-q" #'beginning-of-buffer
+  "g" #'beginning-of-buffer
+  "G" #'end-of-buffer
+  "u" #'scroll-down
+  "v" #'scroll-up
+  "C-u" #'scroll-down
+  "C-v" #'scroll-up
+  "[" #'backward-paragraph
+  "]" #'forward-paragraph
+  "{" #'backward-paragraph
+  "}" #'forward-paragraph
+  )
+
+(global-unset-key (kbd "C-q"))
+(keymap-set global-map "C-q" walter-quickmove-prefix-map)
+
 ;; EOB

@@ -100,6 +100,25 @@ Prefix `C-w` are window manipulation commands.
 - `C-w |` Vertical split window (split-window-right)
 - `C-w -` Horizontal Split window (split-window-below)
 
+## Quick move
+
+Prefix `C-q` is for quick movement.
+
+- `C-q r` Set bookmark register (point-to-register)
+- `C-q m` Set bookmark register (point-to-register)
+- `C-q j` Jump to bookmark register (jump-to-register)
+- `C-q q` Jump to top (beginning-of-buffer)
+- `C-q C-q` Jump to top (beginning-of-buffer)
+- `C-q g` Jump to top (beginning-of-buffer)
+- `C-q G` Jump to end (end-of-buffer)
+- `C-q u` Page up (scroll-down)
+- `C-q v` Page down (scroll-up)
+- `C-q C-u` Page up (scroll-down)
+- `C-q C-v` Page down (scroll-up)
+- `C-q [` Paragraph up (backward-paragraph)
+- `C-q ]` Paragraph down (forward-paragraph)
+- `C-q {` Paragraph up (backward-paragraph)
+- `C-q }` Paragraph down (forward-paragraph)
 
 ## Colorschemes
 
