@@ -90,6 +90,7 @@
   "<left>" #'other-window
   "<right>" #'other-window
   "d" #'delete-window
+  "q" #'delete-window
   "|" #'split-window-right
   "-" #'split-window-below
   )
