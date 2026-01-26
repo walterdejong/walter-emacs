@@ -22,6 +22,8 @@
 (column-number-mode)
 (setq column-number-indicator-zero-based nil)
 (setq-default tab-width 4)
+(setq visible-bell nil)
+(setq ring-bell-function 'ignore)
 
 (when (display-graphic-p)
   (tool-bar-mode -1)
