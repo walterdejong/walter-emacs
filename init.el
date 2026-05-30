@@ -98,6 +98,18 @@
  ;; If there is more than one, they won't work right.
  )
 
+(add-to-list 'load-path "~/.emacs.d/odin-mode")
+(require 'odin-mode)
+
+;;
+;;  C programming
+;;
+(setq tab-width 4)
+(setq c-default-style "linux")
+(setq-default c-basic-offset 4
+              tab-width 4)
+(setq backward-delete-char-untabify-method 'hungry)
+
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 (load-theme 'jblow-moneygreen)
 
