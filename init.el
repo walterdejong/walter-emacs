@@ -7,6 +7,9 @@
 
 (setq debug-on-error t)
 
+;; disable backup "#files#"
+(setq make-backup-files nil)
+
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
