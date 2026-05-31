@@ -2,6 +2,9 @@
 ;;  key bindings
 ;;
 
+;; enable cut/copy/paste/undo with C-x, C-c, C-v, C-z
+(cua-mode t)
+
 ;; Open
 (global-set-key (kbd "C-o") 'find-file)
 
@@ -23,9 +26,6 @@
 
 ;; Jump/Goto Line
 (global-set-key (kbd "C-j") 'goto-line)
-
-;; Undo
-(global-set-key (kbd "C-z") 'undo)
 
 
 (defvar-keymap walter-wordstar-prefix-map

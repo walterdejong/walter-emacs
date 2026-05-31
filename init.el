@@ -44,9 +44,6 @@
 ;; save without query
 (add-hook 'find-file-hook (lambda () (setq buffer-save-without-query t)))
 
-(cua-mode t)
-
-
 ;; nicer window divider line
 (unless standard-display-table
 (setq standard-display-table (make-display-table)))
