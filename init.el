@@ -7,8 +7,9 @@
 
 (setq debug-on-error t)
 
-;; disable backup "#files#"
-(setq make-backup-files nil)
+;; move backup and autosave files
+(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
