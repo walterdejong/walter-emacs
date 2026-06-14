@@ -111,7 +111,10 @@
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 (load-theme 'jblow-moneygreen)
 
-(load (expand-file-name (concat user-emacs-directory "keybindings")))
+(if (<= emacs-major-version 27)
+    (load (expand-file-name (concat user-emacs-directory "keybindings-27")))
+  (load (expand-file-name (concat user-emacs-directory "keybindings")))
+)
 
 (set-cursor-color "green")
 
